@@ -29,10 +29,6 @@ img.emoji {
 	padding: 0 !important;
 }
 </style>
-<link rel="stylesheet" href="/wp-content/plugins/gravityforms/css/formreset.min.css?ver=2.1.2">
-<link rel="stylesheet" href="/wp-content/plugins/gravityforms/css/formsmain.min.css?ver=2.1.2">
-<link rel="stylesheet" href="/wp-content/plugins/gravityforms/css/readyclass.min.css?ver=2.1.2">
-<link rel="stylesheet" href="/wp-content/plugins/gravityforms/css/browsers.min.css?ver=2.1.2">
 <link rel="stylesheet" href="/assets/main.min.css?ver=d093dcb9592169aa98efa7c66240aee6">
 <!-- This site uses the Google Analytics by MonsterInsights plugin v5.5.4 - Universal disabled - https://www.monsterinsights.com/ -->
 <script type="text/javascript">
@@ -55,12 +51,8 @@ img.emoji {
 <!-- / Google Analytics by MonsterInsights -->
 <script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
 <script>window.jQuery || document.write('<script src="http://stotesburytransfer.com/wp-content/themes/stotesbury/assets/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-<script type='text/javascript' src='/wp-content/plugins/gravityforms/js/jquery.json.min.js?ver=2.1.2'></script>
-<script type='text/javascript' src='/wp-content/plugins/gravityforms/js/gravityforms.min.js?ver=2.1.2'></script>
-<script type='text/javascript' src='/wp-content/plugins/gravityforms/js/conditional_logic.min.js?ver=2.1.2'></script>
-<script type='text/javascript' src='/wp-content/plugins/gravityforms/js/jquery.maskedinput.min.js?ver=2.1.2'></script>
-<script type='text/javascript' src='/wp-content/themes/stotesbury/assets/js/vendor/respond.min.js'></script>
-<script type='text/javascript' src='/wp-content/themes/stotesbury/assets/js/vendor/modernizr-2.7.0.min.js'></script>
+<script type='text/javascript' src='/assets/respond.min.js'></script>
+<script type='text/javascript' src='/assets/modernizr-2.7.0.min.js'></script>
 <link rel='https://api.w.org/' href='http://stotesburytransfer.com/wp-json/' />
 <link rel="alternate" type="application/json+oembed" href="http://stotesburytransfer.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fstotesburytransfer.com%2Finformation-request-form%2F" />
 <link rel="alternate" type="text/xml+oembed" href="http://stotesburytransfer.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fstotesburytransfer.com%2Finformation-request-form%2F&#038;format=xml" />
@@ -108,7 +100,88 @@ img.emoji {
     <div class="content row">
       <main class="main col-sm-8" role="main">
           <p>Please fill out our form and a representative from our team will respond as quickly as possible.</p>
-                <script type="text/javascript" src="https://form.jotform.ca/jsform/71135235993257"></script>
+          <form action="https://www.enformed.io/i296eqlv" method="POST" class="ajax_form" type="multipart/form-data">
+            <div class="form-group">
+              <label>Name</label>
+              <input class="form-control" type="text" name="Name" required placeholder="Your Name">
+            </div>
+            <div class="form-group">
+              <label>Company Name</label>
+              <input class="form-control" type="text" name="Company Name" required placeholder="Company Name">
+            </div>
+            <div class="form-group">
+              <label>E mail</label>
+              <input class="form-control" type="email" name="Email" required placeholder="Your email">
+            </div>
+            <div class="form-group">
+              <label>Phone</label>
+              <input class="form-control" type="text" name="Phone" required placeholder="Company Name">
+            </div>
+            <div class="form-group">
+              <label>Address</label>
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <input class="form-control" type="text" name="Address" placeholder="Street Address">
+                </div>
+              </div>
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <input class="form-control" type="text" name="Address 2" placeholder="Suite/Apartment">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4"><input class="form-control" type="text" name="City" placeholder="City"></div>
+                <div class="col-md-4"><input class="form-control" type="text" name="Province" placeholder="Province"></div>
+                <div class="col-md-4"><input class="form-control" type="text" name="Postal Code" placeholder="Postal Code"></div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Preferred Method of contact?</label>
+              <div class="radio"><label><input type="radio" required name="Preferred Contact Method" value="Email">Email</label></div>
+              <div class="radio"><label><input type="radio" required name="Preferred Contact Method" value="Phone">Phone</label></div>
+            </div>
+            <div class="form-group">
+              <label>Type of Request</label>
+              <div class="radio"><label><input type="radio" required name="Type of Request" value="Food Grade Transportation">Food Grade Transportation</label></div>
+              <div class="radio"><label><input type="radio" required name="Type of Request" value="Load Quotation">Load Quotation</label></div>
+              <div class="radio"><label><input type="radio" required name="Type of Request" value="Tanker Trailer Wash">Tanker Trailer Wash</label></div>
+              <div class="radio"><label><input type="radio" required name="Type of Request" value="Employment Inquiry">Employment Inquiry</label></div>
+              <div class="radio form-horizontal"><label class="form-inline"><input type="radio" required name="Type of Request" value="Other">Other
+              <input type="text" name="Other Type of Request" class="form-control form-inline input-sm" style="width: 200px">
+              </label></div>
+            </div>
+            <script>
+              $(document).ready(function(){
+                $(":radio").change(function(){
+                  el = $(this);
+                  other = $(":radio[value=Other][name='" + el.attr("name") + "']")
+                  if (other.length) {
+                    if (other.is(":checked")) {
+                      $(":input:text", other.parent()).removeProp('disabled').focus()
+                    } else {
+                      $(":input:text", other.parent()).prop('disabled',true)
+                    }
+                  }
+                })
+                $(":radio[value=Other]").trigger("change")
+              })
+            </script>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea name="message" class="form-control" rows="5"></textarea>
+            </div>
+
+            <input type="hidden"  name="*redirect" value="http://stotesburytransfer.com/?thanks">
+            <input type="hidden" name="*formname" value="Information Request" />
+            <input type="hidden" name="*default_email" value="bryan@stotesburytransfer.com" />
+            <input type="hidden" name="*cc" value="bruce@stotesburytransfer.com" />
+            <input type="hidden" name="*reply" value="email" />
+            <input type="hidden" name="*honeypot" />
+            <input type="hidden" name="*subject" value="Information Request Submission" />
+
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Send</button>
+          </form>
         </main><!-- /.main -->
               <aside class="sidebar col-sm-4" role="complementary">
           <section class="widget widget_roots_vcard-2 widget_roots_vcard"><div class="widget-inner"><h3>Stotesbury Transfer Limited</h3>    <p class="vcard">
@@ -168,8 +241,7 @@ img.emoji {
       </div>
     </footer>
 
-<script type='text/javascript' src='/wp-content/themes/stotesbury/assets/js/scripts.min.js?ver=be373268f9b8ecda7c3a45154676e637'></script>
-<script type='text/javascript' src='/wp-includes/js/wp-embed.min.js?ver=4.7.4'></script>
+<script type='text/javascript' src='/assets/scripts.min.js?ver=be373268f9b8ecda7c3a45154676e637'></script>
 
 </body>
 </html>

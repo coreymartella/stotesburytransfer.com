@@ -29,10 +29,6 @@ img.emoji {
 	padding: 0 !important;
 }
 </style>
-<link rel="stylesheet" href="/wp-content/plugins/gravityforms/css/formreset.min.css?ver=2.1.2">
-<link rel="stylesheet" href="/wp-content/plugins/gravityforms/css/formsmain.min.css?ver=2.1.2">
-<link rel="stylesheet" href="/wp-content/plugins/gravityforms/css/readyclass.min.css?ver=2.1.2">
-<link rel="stylesheet" href="/wp-content/plugins/gravityforms/css/browsers.min.css?ver=2.1.2">
 <link rel="stylesheet" href="/assets/main.min.css?ver=d093dcb9592169aa98efa7c66240aee6">
 <!-- This site uses the Google Analytics by MonsterInsights plugin v5.5.4 - Universal disabled - https://www.monsterinsights.com/ -->
 <script type="text/javascript">
@@ -55,13 +51,7 @@ img.emoji {
 <!-- / Google Analytics by MonsterInsights -->
 <script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
 <script>window.jQuery || document.write('<script src="/assets/jquery-1.10.2.min.js"><\/script>')</script>
-<script type='text/javascript' src='/wp-content/plugins/gravityforms/js/jquery.json.min.js?ver=2.1.2'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var gform_gravityforms = {"strings":{"invalid_file_extension":"This type of file is not allowed. Must be one of the following: ","delete_file":"Delete this file","in_progress":"in progress","file_exceeds_limit":"File exceeds size limit","illegal_extension":"This type of file is not allowed.","max_reached":"Maximum number of files reached","unknown_error":"There was a problem while saving the file on the server","currently_uploading":"Please wait for the uploading to complete","cancel":"Cancel","cancel_upload":"Cancel this upload","cancelled":"Cancelled"},"vars":{"images_url":"http:\/\/stotesburytransfer.com\/wp-content\/plugins\/gravityforms\/images"}};
-/* ]]> */
-</script>
-<script type='text/javascript' src='/wp-content/plugins/gravityforms/js/gravityforms.min.js?ver=2.1.2'></script>
+
 <script type='text/javascript' src='/assets/respond.min.js'></script>
 <script type='text/javascript' src='/assets/modernizr-2.7.0.min.js'></script>
 <link rel='https://api.w.org/' href='http://stotesburytransfer.com/wp-json/' />
@@ -111,8 +101,83 @@ var gform_gravityforms = {"strings":{"invalid_file_extension":"This type of file
     <div class="content row">
       <main class="main col-sm-8" role="main">
           <p>If you&#8217;re looking for a fulfilling professional career in a positive, family based work environment, fill out our application below and submit your resume!</p>
-<script type="text/javascript" src="https://form.jotform.ca/jsform/71135157193252"></script>
-<p>&nbsp;</p>
+
+          <form action="https://www.enformed.io/i296eqlv" method="POST" class="ajax_form" type="multipart/form-data">
+            <div class="form-group">
+              <label>Name</label>
+              <input class="form-control" type="text" name="Name" required placeholder="Your Name">
+            </div>
+            <div class="form-group">
+              <label>E mail</label>
+              <input class="form-control" type="email" name="Email" required placeholder="Your email">
+            </div>
+            <div class="form-group">
+              <label>What class of license do you have?</label>
+              <div class="radio"><label><input type="radio" required name="License Class" value="AZ License">AZ License</label></div>
+              <div class="radio"><label><input type="radio" required name="License Class" value="DZ License">DZ License</label></div>
+            </div>
+            <div class="form-group">
+              <label>Do you have a clean Driver's Abstract?</label>
+              <div class="radio"><label><input type="radio" required name="Clean Driver Abstract" value="Yes">Yes</label></div>
+              <div class="radio"><label><input type="radio" required name="Clean Driver Abstract" value="No">No</label></div>
+            </div>
+            <div class="form-group">
+              <label>Are you Fast Card Eligible?</label>
+              <div class="radio"><label><input type="radio" required name="Fast Card Eligible" value="Yes">Yes</label></div>
+              <div class="radio"><label><input type="radio" required name="Fast Card Eligible" value="No">No</label></div>
+              <div class="radio"><label><input type="radio" required name="Fast Card Eligible" value="Already Have Card">Already Have Card</label></div>
+            </div>
+            <div class="form-group">
+              <label>Long Haul or Short Haul Driver?</label>
+              <div class="radio"><label><input type="radio" required name="Long or Short Haul" value="Long Haul">Long Haul</label></div>
+              <div class="radio"><label><input type="radio" required name="Long or Short Haul" value="Short Haul">Short Haul</label></div>
+            </div>
+            <script>
+              UPLOADCARE_LOCALE = "en";
+              UPLOADCARE_TABS = "file url gdrive dropbox";
+              UPLOADCARE_PUBLIC_KEY = "f282a7f2dfcd8a7118d2";
+            </script>
+            <script charset="utf-8" src="//ucarecdn.com/libs/widget/3.0.0/uploadcare.full.min.js"></script>
+            <div class="form-group">
+              <label>Upload Resume and Cover Letter</label>
+              <div class="input-group">
+                <input type="hidden" role="uploadcare-uploader" name="resume" data-multiple="true" />                
+              </div>
+            </div>
+
+            <input type="hidden"  name="*redirect" value="http://stotesburytransfer.com/?thanks">
+            <input type="hidden" name="*formname" value="Drive For Us" />
+            <input type="hidden" name="*default_email" value="bryan@stotesburytransfer.com" />
+            <input type="hidden" name="*cc" value="bruce@stotesburytransfer.com" />
+            <input type="hidden" name="*reply" value="email" />
+            <input type="hidden" name="*honeypot" />
+            <input type="hidden" name="*subject" value="Drive For Us Submission" />
+
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Send</button>
+          </form>
+<!--           <script>
+            $(document).ready(function(){
+              $(".ajax_form").submit(function(event){
+                event.preventDefault();
+                form = $(this);
+                $.ajax({
+                  url: form.attr('action'),
+                  method: "post",
+                  dataType: "json",
+                  accepts: "application/json",
+                  data: form.serialize(),
+                  success: function(){
+                    form.hide();
+                    $('#form_success').show();
+                  },
+                  error: function(){
+                    $('#form_error').show();
+                  }
+                });
+              });
+            });
+          </script> -->
+          <p>&nbsp;</p>
         </main><!-- /.main -->
               <aside class="sidebar col-sm-4" role="complementary">
           <section class="widget widget_roots_vcard-2 widget_roots_vcard"><div class="widget-inner"><h3>Stotesbury Transfer Limited</h3>    <p class="vcard">
@@ -173,7 +238,6 @@ var gform_gravityforms = {"strings":{"invalid_file_extension":"This type of file
     </footer>
 
 <script type='text/javascript' src='/assets/scripts.min.js?ver=be373268f9b8ecda7c3a45154676e637'></script>
-<script type='text/javascript' src='/wp-includes/js/wp-embed.min.js?ver=4.7.3'></script>
 
 </body>
 </html>

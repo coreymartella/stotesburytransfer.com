@@ -94,10 +94,21 @@ img.emoji {
         <h1>Stotesbury Transfer Limited</h1>
         <p>A specialized bulk liquid food carrier concentrating on the transportation of various specialty Bulk Liquid Food-Grade Products and Bulk Milk serving both Canada and the U.S.A.</p>
         <p><a class="btn btn-primary btn-lg" href="/contact-us">Contact Us Today!</a></p>
+
     </div>
 </div>      <div class="wrap container" role="document">
     <div class="content row">
       <main class="main col-sm-12" role="main">
+        <div class="alert alert-success" id="thanks" style="display: none;">
+          Thanks for your Submission!
+        </div>
+        <script>
+          $(document).ready(function(){
+            if (document.location.href.indexOf("thanks") != -1) {
+              $("#thanks").show()
+            }
+          })
+        </script>
             <!-- Marketing messaging and featurettes
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
